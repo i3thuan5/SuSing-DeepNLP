@@ -1,2 +1,17 @@
-# su5-sing3_deepnlp
+# Sû-sìng deepnlp
 詞性標記模型
+
+
+## 愛調整的檔案
+```
+data/tw.conf
+data/tw/train.txt
+data/tw/dev.txt
+data/tw/test.txt
+```
+
+## 訓練kah執行
+```
+time docker build -t su5-sing3_deepnlp .
+time docker run -ti --rm su5-sing3_deepnlp python
+```
