@@ -14,5 +14,4 @@ RUN python3 pos_model.py tw
 WORKDIR /usr/local/deepnlp
 RUN pip3 install Flask gunicorn
 COPY 標詞性.py 標詞性.py
-EXPOSE 5000
 
