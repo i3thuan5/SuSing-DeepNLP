@@ -4,7 +4,7 @@ from flask import Flask
 import json
 
 
-deepnlp.register_model('pos', 'tw')
+register_model('pos', 'tw')
 tagger = pos_tagger.load_model(name='tw')
 
 app = Flask(__name__)
