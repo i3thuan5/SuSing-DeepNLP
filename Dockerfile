@@ -5,9 +5,11 @@ WORKDIR /usr/local/deepnlp/deepnlp/pos
 COPY data/tw.conf data/tw.conf
 RUN cat data/tw.conf >> data/models.conf
 
-COPY data/tw/train.txt data/tw/train.txt
-COPY data/tw/dev.txt data/tw/dev.txt
-COPY data/tw/test.txt data/tw/test.txt
+COPY data/tw/train.txt.gz data/tw/train.txt.gz
+COPY data/tw/dev.txt.gz data/tw/dev.txt.gz
+COPY data/tw/test.txt.gz data/tw/test.txt.gz
+
+RUN gzip -d data/tw/*.gz
 
 RUN python3 pos_model.py tw
 
