@@ -10,6 +10,11 @@ data/tw/dev.txt
 data/tw/test.txt
 ```
 
+## 用便的模型
+```
+time docker run --name taigi_susing -e VIRTUAL_HOST=xn--s-sng-vsa6h.xn--v0qr21b.xn--kpry57d -e VIRTUAL_PORT=5000 --expose=5000 --rm i3thuan5/taigi_susing gunicorn -w 2 -b 0.0.0.0:5000 --log-level debug 標詞性:app
+```
+
 ## 訓練kah執行
 ```
 time docker build -t su5-sing3_deepnlp .
