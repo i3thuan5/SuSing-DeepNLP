@@ -17,3 +17,4 @@ WORKDIR /usr/local/deepnlp
 RUN pip3 install Flask gunicorn
 COPY 標詞性.py 標詞性.py
 
+CMD gunicorn -w 2 -b 0.0.0.0:5000 --log-level debug 標詞性:app
