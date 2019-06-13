@@ -12,6 +12,8 @@ services:
     environment:
       VIRTUAL_HOST: "xn--s-sng-vsa6h.xn--v0qr21b.xn--kpry57d"
       VIRTUAL_PORT: 5000
+      LETSENCRYPT_HOST: "xn--s-sng-vsa6h.xn--v0qr21b.xn--kpry57d"
+      LETSENCRYPT_EMAIL: "ithuan@xn--v0qr21b.xn--kpry57d"
     restart: always
 
 networks:
