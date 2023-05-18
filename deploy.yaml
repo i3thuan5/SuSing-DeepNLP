@@ -32,17 +32,3 @@
         build: true
         pull: true
         remove_orphans: true
-    - name: 等5秒hōo docker開--開
-      ansible.builtin.wait_for:
-        timeout: 5
-      delegate_to: localhost
-    - name: 更新資料庫
-      ansible.builtin.command: |
-        docker-compose exec -T gunicorn python manage.py migrate
-      args:
-        chdir: "{{ tsuanan_repo }}"
-    - name: 更新nginx
-      ansible.builtin.command: |
-        docker-compose exec -T nginx nginx -s reload
-      args:
-        chdir: "{{ tsuanan_repo }}"
