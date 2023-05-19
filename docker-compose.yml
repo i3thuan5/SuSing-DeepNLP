@@ -10,9 +10,9 @@ services:
       - default
       - nginx-bridge
     environment:
-      VIRTUAL_HOST: "susing.ithuan.tw,xn--s-sng-vsa6h.xn--v0qr21b.xn--kpry57d"
+      VIRTUAL_HOST: "${VIRTUAL_HOST:-susing.ithuan.tw}"
       VIRTUAL_PORT: 5000
-      LETSENCRYPT_HOST: "susing.ithuan.tw,xn--s-sng-vsa6h.xn--v0qr21b.xn--kpry57d"
+      LETSENCRYPT_HOST: "${VIRTUAL_HOST:-susing.ithuan.tw}"
       LETSENCRYPT_EMAIL: "ithuan@ithuan.tw"
     restart: always
 
